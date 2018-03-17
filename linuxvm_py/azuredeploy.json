@@ -38,16 +38,16 @@
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'salinuxvm')]",
     "imagePublisher": "Canonical",
     "imageOffer": "UbuntuServer",
-    "nicName": "myVMNic",
+    "nicName": "VMNIC01",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
     "storageAccountType": "Standard_LRS",
-    "publicIPAddressName": "myPublicIP",
+    "publicIPAddressName": "PublicIP01",
     "publicIPAddressType": "Dynamic",
-    "vmName": "MyUbuntuVM",
+    "vmName": "UbuntuVM01",
     "vmSize": "Standard_A1",
-    "virtualNetworkName": "MyVNET",
+    "virtualNetworkName": "VNET01",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]"
   },
@@ -170,6 +170,27 @@
             "enabled": true,
             "storageUri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), '2016-01-01').primaryEndpoints.blob)]"
           }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "name": "[concat(variables('vmName'),'/newuserscript')]",
+      "apiVersion": "2015-06-15",
+      "location": "[resourceGroup().location]",
+      "dependsOn": [
+        "[concat('Microsoft.Compute/virtualMachines/', variables('vmName'))]"
+      ],
+      "properties": {
+        "publisher": "Microsoft.Azure.Extensions",
+        "type": "CustomScript",
+        "typeHandlerVersion": "2.0",
+        "autoUpgradeMinorVersion": true,
+        "settings": {
+          "fileUris": [
+            "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/ubuntu-desktop-xfce-rdp/install_xrdp.sh"
+          ],
+          "commandToExecute": "bash install_ds.sh"
         }
       }
     }
