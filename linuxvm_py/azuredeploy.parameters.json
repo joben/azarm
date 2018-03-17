@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "joben"
+      "value": "azuser"
     },
     "adminPassword": {
-      "value": "hi+rEFresh"
+      "value": "azpassword"
     },
     "dnsLabelPrefix": {
-      "value": "tinapy"
+      "value": "azfqdn"
     }
   }
 }

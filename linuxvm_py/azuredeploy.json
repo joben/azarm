@@ -188,7 +188,7 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
           "fileUris": [
-            "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/ubuntu-desktop-xfce-rdp/install_xrdp.sh"
+            "https://raw.githubusercontent.com/joben/arm/master/linuxvm_py/install_ds.sh"
           ],
           "commandToExecute": "bash install_ds.sh"
         }
