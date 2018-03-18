@@ -188,7 +188,7 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
           "fileUris": [
-            "https://raw.githubusercontent.com/joben/arm/master/linuxvm_py/install_ds.sh"
+            "https://raw.githubusercontent.com/joben/azarm/master/linuxvm_py/install_ds.sh"
           ],
           "commandToExecute": "bash install_ds.sh"
         }
