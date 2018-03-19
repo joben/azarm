@@ -12,7 +12,7 @@ sudo /etc/init.d/xrdp start
 cd ~
 wget -c https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh
 bash Anaconda3-4.3.1-Linux-x86_64.sh -b -p ~/anaconda 
-rm Anaconda3-4.3.1-Linux-x86_64.sh 
+# rm Anaconda3-4.3.1-Linux-x86_64.sh 
 
 echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc 
 
