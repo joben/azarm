@@ -19,6 +19,6 @@ echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc
 # Refresh basically
 source .bashrc
 
-conda update conda
+# conda update conda
 
  
