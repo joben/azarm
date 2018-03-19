@@ -46,7 +46,7 @@
     "publicIPAddressName": "PublicIP01",
     "publicIPAddressType": "Dynamic",
     "vmName": "UbuntuVM01",
-    "vmSize": "Standard_A1",
+    "vmSize": "Standard_A3",
     "virtualNetworkName": "VNET01",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]"
