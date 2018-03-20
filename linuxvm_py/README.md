@@ -1,5 +1,11 @@
 #Setting up the required software for DAT210x 
 
+#Template uses Azure Key Vault for setting the admin user credentials. Make sure to run the following
+
+```bash
+az keyvault update -n myKeyVault -g myResourceGroup --set properties.enabledForDeployment=true
+```
+
 ```bash
 az group deployment create --name <name> \ 
 --resource-group $(az group create --location <location> --name dsvmgRG --output tsv | cut -f4) \
