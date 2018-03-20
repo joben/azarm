@@ -18,10 +18,11 @@ sudo apt-get update
 sudo apt-get install code # or code-insiders
 
 # install anaconda
-sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O ~/Anaconda3-4.3.1-Linux-x86_64.sh
+sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O /home/joben/anaconda.sh
 
-#bash ~/anaconda.sh -b -p $HOME/anaconda 
-#rm ~/anaconda.sh 
+#bash /home/joben/anaconda.sh -b -p /home/joben/anaconda 
+#rm /home/joben/anaconda.sh
+
 #export PATH="$HOME/anaconda/bin:$PATH"
 
 #echo 'export PATH="$HOME/anaconda/bin:$PATH"' >> ~/.bashrc 
