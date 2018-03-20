@@ -1,7 +1,9 @@
 #Setting up the required software for DAT210x 
 
 ```bash
-az group deployment create --name iterg --resource-group $(az group create --location southeastasia --name dsvmgRG --outputtsv | cut -f4) --template-file linuxvm_py/azuredeploy.json --parameters @linuxvm_py/azuredeploy.parameters.json
+az group deployment create --name <name> \ 
+--resource-group $(az group create --location <location> --name dsvmgRG --output tsv | cut -f4) \
+--template-file <template> --parameters @<parameters>
 ```
 
 Troubleshooting your scripts - Linux Custom Script Extension 
