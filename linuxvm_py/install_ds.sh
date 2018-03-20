@@ -17,7 +17,9 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo apt-get update
 sudo apt-get install code # or code-insiders
 
-#workaround for bug preventing vscode from running in xdrp/remote session
+# workaround for bug preventing vscode from running in xdrp/remote session
+# https://github.com/Microsoft/vscode/issues/3451
+
 cd /usr/lib/x86_64-linux-gnu
 sudo tar -cvf vscodehack.tar libxcbso*
 sudo sed -i 's/BIG-REQUESTS/_IG-REQUESTS/' /usr/lib/x86_64-linux-gnu/libxcb.so.1
