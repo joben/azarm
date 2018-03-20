@@ -17,6 +17,13 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo apt-get update
 sudo apt-get install code # or code-insiders
 
+#workaround for bug preventing vscode from running in xdrp/remote session
+cd /usr/lib/x86_64-linux-gnu
+sudo tar -cvf vscodehack.tar libxcbso*
+sudo sed -i 's/BIG-REQUESTS/_IG-REQUESTS/' /usr/lib/x86_64-linux-gnu/libxcb.so.1
+sudo sed -i 's/BIG-REQUESTS/_IG-REQUESTS/' /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+sudo cp libxcbso* /usr/share/code
+
 # install anaconda
 sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O /anaconda.sh
 
