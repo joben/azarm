@@ -11,7 +11,7 @@ sudo /etc/init.d/xrdp start
 
 sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -o ~/anaconda.sh
 sudo bash ~/anaconda.sh -b -p $HOME/anaconda 
-# rm Anaconda3-4.3.1-Linux-x86_64.sh 
+sudo rm ~/anaconda.sh 
 export PATH="$HOME/anaconda/bin:$PATH"
 
 echo 'export PATH="$HOME/anaconda/bin:$PATH"' >> ~/.bashrc 
@@ -19,6 +19,6 @@ echo 'export PATH="$HOME/anaconda/bin:$PATH"' >> ~/.bashrc
 # Refresh basically
 source ~/.bashrc
 
-# conda update conda
+#conda update conda
 
  
