@@ -20,21 +20,19 @@ sudo apt-get install code # or code-insiders
 # install anaconda
 sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O /anaconda.sh
 
-#bash /home/joben/anaconda.sh -b -p /home/joben/anaconda 
-#rm /home/joben/anaconda.sh
+bash /anaconda.sh -b -p /home/joben/anaconda3
+rm /anaconda.sh
 
-#export PATH="$HOME/anaconda/bin:$PATH"
+export PATH="/home/joben/anaconda3/bin:$PATH"
 
 #echo 'export PATH="$HOME/anaconda/bin:$PATH"' >> ~/.bashrc 
 
-#sudo pip install BeautifulSoup4
-#sudo pip install html5lib==1.0b8
-#sudo pip install plyfile
+pip install --upgrade pip
+pip install BeautifulSoup4
+pip install html5lib==1.0b8
+pip install plyfile
 
-# Refresh basically
-#source ~/.bashrc
-
-#conda update conda
+conda update conda
 
 # get dat210x repo
 cd /home/joben && mkdir repo && cd repo
