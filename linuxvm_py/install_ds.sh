@@ -9,9 +9,9 @@ sudo apt-get install lxde -y
 sudo apt-get install xrdp -y
 sudo /etc/init.d/xrdp start
 
-sudo wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -o ~/anaconda.sh
-sudo bash ~/anaconda.sh -b -p $HOME/anaconda 
-sudo rm ~/anaconda.sh 
+wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -o ~/anaconda.sh
+bash ~/anaconda.sh -b -p $HOME/anaconda 
+rm ~/anaconda.sh 
 export PATH="$HOME/anaconda/bin:$PATH"
 
 echo 'export PATH="$HOME/anaconda/bin:$PATH"' >> ~/.bashrc 
