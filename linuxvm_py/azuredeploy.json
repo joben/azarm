@@ -46,7 +46,7 @@
     "publicIPAddressName": "[concat('pip', uniquestring(resourceGroup().id))]",
     "publicIPAddressType": "Dynamic",
     "vmName": "[concat('vm', uniquestring(resourceGroup().id))]",
-    "vmSize": "Standard_A3",
+    "vmSize": "Standard_DS2_v2_Promo",
     "virtualNetworkName": "[uniquestring(resourceGroup().id)]",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetID'),'/subnets/',variables('subnetName'))]"
