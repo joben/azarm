@@ -3,7 +3,7 @@
 #Template uses Azure Key Vault for setting the admin user credentials. Make sure to run the following
 
 ```bash
-az keyvault update -n myKeyVault -g myResourceGroup --set properties.enabledForDeployment=true
+az keyvault update -n <keyvaultname> -g <resourcegroup> --set properties.enabledForDeployment=true
 ```
 
 ```bash
