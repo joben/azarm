@@ -1,9 +1,9 @@
 # ARM Workshop Outline
 1. Concepts
-a. Azure Resource Manager (ARM)
-b. Resource Group
-c. ARM Template
-d. Why use templates
+  a. Azure Resource Manager (ARM)
+  b. Resource Group
+  c. ARM Template
+  d. Why use templates
 
 2. ARM Basics
 a. Sections of an ARM template

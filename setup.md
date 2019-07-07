@@ -1,7 +1,4 @@
 #Pre-requisites
-1. Subscription + Role
-
-Roles assigned for 
 
 2. Tools
 a. Install Visual Studio Code
